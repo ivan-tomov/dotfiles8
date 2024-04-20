@@ -5,13 +5,13 @@
     state: directory
   become: yes
 
-- name: Install dotnet 7
+- name: Install dotnet 8
   ansible.builtin.unarchive:
-    src: https://download.visualstudio.microsoft.com/download/pr/c646b288-5d5b-4c9c-a95b-e1fad1c0d95d/e13d71d48b629fe3a85f5676deb09e2d/dotnet-sdk-7.0.102-linux-x64.tar.gz
+    src: https://download.visualstudio.microsoft.com/download/pr/656a3402-6889-400f-927f-7f956856e58b/93750973d6eedd17c6d963658e7ec214/dotnet-sdk-8.0.203-linux-x64.tar.gz
     dest: "/usr/share/dotnet"
     remote_src: yes
   become: yes
-
+  
 # The below is for omnisharp in VS Code
 - name: Create a symbolic link
   ansible.builtin.file:
